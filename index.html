@@ -128,6 +128,8 @@
   p:last-child{margin-bottom:0}
   .lead{font-size:18.5px}
 
+  #argument p strong{font-weight:660;color:var(--ink)}
+
   .pull{
     margin:30px 0; padding:20px 24px; background:var(--accent-soft);
     border-left:3px solid var(--accent); border-radius:0 6px 6px 0;
@@ -184,6 +186,16 @@
     .applogo{width:46px;height:46px;border-radius:10px}
   }
 
+  .cite{font-size:.68em;line-height:0;vertical-align:super}
+  .cite a{border-bottom:none;font-weight:650;padding:0 1px}
+  .sources{margin-top:36px;padding-top:16px;border-top:1px solid var(--rule)}
+  .srchead{font-size:12px;letter-spacing:.11em;text-transform:uppercase;color:var(--ink-3);font-weight:650;margin:0 0 10px}
+  .srclist{margin:0;padding-left:19px;font-size:14.5px;color:var(--ink-3);line-height:1.55}
+  .srclist li{margin:0 0 6px;scroll-margin-top:86px}
+  .srclist li:last-child{margin-bottom:0}
+  .backref{border-bottom:none;font-size:13px}
+  .constants{margin:22px 0 0;font-size:14.5px;color:var(--ink-3);max-width:none}
+
   footer{padding:44px 0 76px;color:var(--ink-3);font-size:15.5px;scroll-margin-top:76px}
   footer a{color:var(--ink-2)}
   .sig{font-size:13px;color:var(--ink-3);margin-top:26px;line-height:1.5}
@@ -195,7 +207,7 @@
   <div class="wrap">
     <span class="navname">Edgar Aguilar</span>
     <div class="navlinks">
-      <a href="#argument">Argument</a>
+      <a href="#argument">Perspective</a>
       <a href="#built">Built</a>
       <a href="#training">Training</a>
       <a href="#writing">Writing</a>
@@ -225,33 +237,32 @@
   <div class="glance">
     <h2>At a glance</h2>
     <ul>
-      <li><b>National electricity reform, Honduras</b> — technical analysis behind enacted legislation</li>
+      <li><b>National electricity reform, Honduras</b> — technical analysis and stakeholder engagement behind the reform bill sent to Congress</li>
       <li><b>230 economies, 1989–2024</b> — built the World Bank's public market structure platform, <a href="https://www.worldbank.org/en/programs/global-power-market-structures">live</a></li>
       <li><b>Grid loss platform</b> — geospatial, by location, <a href="https://potenciahonduras.asjhonduras.com/portal-perdidas/">live</a></li>
       <li><b>62 utilities, 49 countries</b> — panel + difference-in-differences in Python, <a href="https://github.com/eaguilar-git/Master-s-Final-Paper">code and paper</a></li>
       <li><b>50-country DER panel, 2000–2024</b> — IEA, IRENA, and World Bank sources merged</li>
-      <li><b>IMF skills-search tool</b> — five Power BI dashboards over a staff skills inventory</li>
+      <li><b>International Monetary Fund (IMF) skills-search tool</b> — five Power BI dashboards over a staff skills inventory</li>
       <li><b>15 utilities</b> — cost-of-service and tariff structure analysis</li>
       <li><b>176 power purchase agreements</b> — comparative economic analysis</li>
       <li><b>Investment models</b> — multi-scenario NPV and ERR appraisal</li>
       <li><b>Two World Bank papers</b> — forthcoming 2026, contributing author</li>
     </ul>
     <p class="note">Python, Stata, R, SQL, Power BI, Tableau, advanced Excel</p>
-    <p class="note note2">Technical writing and editing, policy and stakeholder engagement, team coordination, cross-team collaboration, critical thinking</p>
   </div>
 </section>
 
 <section id="argument">
-  <h2>The argument</h2>
-  <p class="lead">For nearly two decades US electricity consumption was essentially flat. That era is over. EIA now puts average growth at 1.7% a year from 2020 through 2026, with commercial demand, the category that holds data centers, running at 2.6%.</p>
+  <h2>Perspective</h2>
+  <p class="lead">For nearly two decades US electricity consumption was essentially flat. That era is over. EIA now puts average growth at 1.7% a year from 2020 through 2026, with commercial demand, the category that holds data centers, running at 2.6%.<sup class="cite"><a href="#src1" id="ref1">1</a></sup></p>
   <p>A number that small sounds harmless. It isn't, because the grid it lands on was planned for the flat years. When load grows faster than the system can be built out, the adjustment has to show up somewhere: in interconnection queues, in who pays for new capacity, in where a factory or a data center decides to locate, and eventually in the price level.</p>
   <div class="pull">
     Electricity is a macro variable. Power costs feed industrial competitiveness and inflation. Subsidies and state utility losses feed the fiscal balance. Fuel import dependence feeds the external accounts. Utility arrears become contingent liabilities, and contingent liabilities become debt.
   </div>
-  <p>That last chain is not hypothetical. In much of the world, the electricity sector <em>is</em> a fiscal problem: a state-owned utility that under-recovers its costs, a subsidy line that grows faster than revenue, arrears to generators that eventually land on the sovereign balance sheet. It's a standing item in debt sustainability work and in most IMF programs that touch energy. I've spent the last year inside exactly that problem in Honduras — losses, subsidies, utility solvency, supply adequacy — and the same year building financial models for transmission investment appraisal.</p>
+  <p>That last chain is not hypothetical. In much of the world, the electricity sector <em>is</em> a fiscal problem: a state-owned utility that under-recovers its costs, a subsidy line that grows faster than revenue, arrears to generators that eventually land on the sovereign balance sheet. It's a standing item in debt sustainability work and in most IMF programs that touch energy. <strong>I've spent the last year inside exactly that problem in Honduras</strong> — losses, subsidies, utility solvency, supply adequacy — and the same year <strong>building financial models for transmission investment appraisal</strong>.</p>
   <p>The awkward part is that the questions this raises sit between two disciplines that rarely share a desk. What a large buyer pays under a given tariff in a given interconnection zone is a microeconomic rate question. Whether a country's power costs are eroding its tradable sector, or whether its utility subsidies are consistent with a credible fiscal path, is a macroeconomic one. Same system, examined at different resolutions; the analysis usually stops at whichever end the analyst was trained on.</p>
-  <p>I trained on the macro end and specialized in the micro one. My master's was in international economics with quantitative methods: trade and tariff analysis, balance of payments, international financial relations and debt sustainability, applied econometrics. My work has been in power markets: cost-of-service, tariff design, PPAs, transmission economics, utility performance. I don't think of those as two careers. Reading a rate case and reading an external position are the same act of finding where a system's costs are actually being carried.</p>
-  <p>There's a second reason I think this vantage matters now. The advanced economies are entering a constrained-supply period that much of the world has never left. Systems I've worked in have spent decades managing exactly this: demand outpacing reliable supply, losses eating margin, subsidies straining budgets, investment decisions that can't wait for perfect information. The failure modes are known. They just haven't been read across.</p>
+  <p><strong>I trained on the macro end and specialized in the micro one.</strong> My master's was in <strong>international economics with quantitative methods</strong>, covering trade and tariff analysis, balance of payments, international financial relations and debt sustainability, and applied econometrics. My work since has been in <strong>power markets</strong>, on cost-of-service and tariff design, PPAs, transmission economics, and utility performance. I don't think of those as two careers. Reading a rate case and reading an external position are the same act of finding where a system's costs are actually being carried.</p>
+  <p>There's a second reason I think this vantage matters now. The advanced economies are entering a constrained-supply period that much of the world has never left. <strong>Systems I've worked in have spent decades managing exactly this:</strong> demand outpacing reliable supply, losses eating margin, subsidies straining budgets, investment decisions that can't wait for perfect information. The failure modes are known. They just haven't been read across.</p>
 
   <div class="cols" style="padding-top:12px">
     <div>
@@ -262,6 +273,13 @@
       <h3>Macroeconomic analysis</h3>
       <p>Energy subsidies and utility losses as fiscal risk. Tariff and trade analysis. Balance of payments and external position. Debt sustainability and the role of international financial institutions. Applied econometrics.</p>
     </div>
+  </div>
+
+  <div class="sources">
+    <p class="srchead">Source</p>
+    <ol class="srclist">
+      <li id="src1">U.S. Energy Information Administration, <em>Today in Energy</em>, &ldquo;After more than a decade of little change, U.S. electricity consumption is rising again,&rdquo; 13 May 2025. <a href="https://www.eia.gov/todayinenergy/detail.php?id=65264">eia.gov</a> <a class="backref" href="#ref1">&#8617;</a></li>
+    </ol>
   </div>
 </section>
 
@@ -377,7 +395,7 @@
   <h2>Where I've done it</h2>
   <ul class="plain">
     <li><strong>Potencia Honduras, ASJ-Transparency International — Principal Energy Sector Restructuring Specialist</strong> <span class="yr">2026–present</span><br>
-    Coordinating the technical work behind a national electricity restructuring: market rules, utility business model, losses, supply adequacy, subsidies. Analysis that fed enacted legislation.</li>
+    Coordinating the technical work and stakeholder engagement behind a national electricity restructuring: market rules, utility business model, losses, supply adequacy, subsidies. Analysis that fed the reform bill the president submitted to Congress.</li>
     <li><strong>EFI Foundation — Research Associate</strong> <span class="yr">2026</span><br>
     Business models and deal structures for scaling nuclear in the US; grid modernization and transmission expansion research.</li>
     <li><strong>International Monetary Fund, Fiscal Affairs Department — Project Officer, HR Data Analytics (STC)</strong> <span class="yr">2025–2026</span><br>
@@ -389,6 +407,7 @@
     <li><strong>American University</strong> <span class="yr">MA, International Economics: Quantitative Methods, 2025</span><br>
     <strong>Calvin University</strong> <span class="yr">BA, Economics and International Relations, 2019</span></li>
   </ul>
+  <p class="constants">Technical writing and editing, policy and stakeholder engagement, team coordination, cross-team collaboration, critical thinking</p>
 </section>
 
 <section id="side">
@@ -407,7 +426,7 @@
 <footer id="contact">
   <p>If you're working on load growth, rate design, transmission investment, energy subsidy reform, or the fiscal and external consequences of any of it — I'd like to hear about it.</p>
   <p><a href="mailto:aguilared.96@gmail.com">aguilared.96@gmail.com</a> &middot; <a href="https://linkedin.com/in/aguilared">linkedin.com/in/aguilared</a></p>
-  <p class="sig">Consumption figures: U.S. Energy Information Administration, <em>Today in Energy</em>, "After more than a decade of little change, U.S. electricity consumption is rising again." Views my own.</p>
+  <p class="sig">Views my own.</p>
 </footer>
 
 </div>
